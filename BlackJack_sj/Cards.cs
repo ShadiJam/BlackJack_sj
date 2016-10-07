@@ -43,8 +43,10 @@ namespace BlackJack
         {
             return suit.ToString() + "-" + rank.ToString();
         }
+
         public int asScore()
         {
+            //adds value to cards
             switch (rank)
             {
                 case Rank.Ace: return 11;
@@ -85,31 +87,10 @@ namespace BlackJack
             }
 
         }
-        public static void swap(Card[] arr, int a, int b)
-        {
-            var temp = arr[a];
-            arr[a] = arr[b];
-            arr[b] = temp;
-        }
-        public Deck()
-        {
-            for (int i = 0; i < 52; i++)
-            {
-                int r = new Random().Next(i, 52);
-                swap(cards, i, r);
-            }
-            randomize;
-        }
-    }
-    public Card deal() => (numDealt < cards.Length) ? cards[numDealt++] : null;
+    
+    
 
-    public class Hand() 
-    {
-        public Card cards[] = new Card[0]
-        //you have to create this
-
-        public int score() { }
-    //you have to create this
+ //creates process for printing cards dealt
         public override string ToString()
         {
         Console.Write("Card(0): ", i);
@@ -118,13 +99,7 @@ namespace BlackJack
         Console.WriteLine("Rank: (0) ", myDeck.cards[i].rank.ToString());
         }
   
-        public void take(Card newCard)
-        {
-        //you have to create this
-            var temp = new Card[cards.Length + 1];
-            int = 0;
-        //there is more that goes in here
-        }    
+        
 }
 
 
