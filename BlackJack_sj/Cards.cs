@@ -27,7 +27,7 @@ namespace BlackJack
         Queen,
         King
     }
-    //creates card classes
+    //creates each card by conbining each suit with each rank
     public class Card
     {
         public Suit suit;
@@ -38,15 +38,9 @@ namespace BlackJack
             suit = s;
             rank = r;
         }
-        //creates what player will see in console
-        public override string ToString()
-        {
-            return suit.ToString() + "-" + rank.ToString();
-        }
-
         public int asScore()
         {
-            //adds value to cards
+            //creates value for each card
             switch (rank)
             {
                 case Rank.Ace: return 11;
@@ -65,12 +59,17 @@ namespace BlackJack
                 default: return 0;
             }
         }
+        //translates card id integers into strings
+        public override string ToString()
+        {
+            return suit.ToString() + "-" + rank.ToString();
+        }
     }
-    //creates deck
+
     public class Deck
     {
+        //creates deck
         public Card[] cards;
-        private int numDealt = 0;
         public Deck()
         {
             cards = new Card[52];
@@ -85,26 +84,52 @@ namespace BlackJack
                 }
                 i++;
             }
-
         }
-    
-    
-
- //creates process for printing cards dealt
-        public override string ToString()
+            public void swap(Card[] arr, int a, int b)
         {
-        Console.Write("Card(0): ", i);
-        Console.WriteLine("Suit: (0) ", myDeck.cards[i].suit.ToString());
-        Console.Write("Card (0): ", i);
-        Console.WriteLine("Rank: (0) ", myDeck.cards[i].rank.ToString());
+            var temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
         }
-  
+        public void Shuffle()
+        {
+            int rand = new Random().Next(0, 52);
+            for (int i = 0; i < 52; i++) 
+            {
+                swap(cards, i, rand);
+            }
+        }
+            
+        }
+            
+        }
         
-}
+    
+        
+
+    
+        
+        
+       
+        
+
+
+
+
+
+
+
 
 
 
 /*
+ * public override string ToString()
+            {
+                public void take(Card newCard)
+            {
+                var temp = new Card[cards.Length + 1];
+                int = 0;
+                foreach 
             Deck dealerDeck = new Deck();
             Deck shuffledDeck = new Deck();
 
