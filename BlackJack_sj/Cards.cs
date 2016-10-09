@@ -113,29 +113,37 @@ namespace BlackJack
     }
     public class Hand
     {
-        public Card[] 
+        public Card[] cards { set; get; }
+        public int numCardsDealt { set; get; }
+        public int score { set; get; }
+        
+
+        public string result { set; get; }
+        public override string ToString()
         {
-            
+            return base.ToString();)
         }
 
-        
-        {
-            public static userHand(Card newCard)
+        public Hand userHand(int numCardsDealt);
                 }
-                public Card[] cards = new CardRandomizer();
+                
+                userHand = 
+
+
+
                 
                 
                 {
-            public static compHand(Card newCard)
+            public Hand compHand()
                 {
 
                 }
-            static int countUserHandScore(int a, int b)
+            static int countUserScore(int a, int b)
             {
                 int result = a + b;
                 return a + b;
             }
-            static int countCompHandScore(int a, int b)
+            static int countCompScore(int a, int b)
             {
                 int result = a + b;
                 return a + b;
