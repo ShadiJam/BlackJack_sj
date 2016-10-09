@@ -41,6 +41,7 @@ namespace BlackJack
         public int asScore()
         {
             //creates value for each card
+            
             switch (rank)
             {
                 case Rank.Ace: return 11;
@@ -58,6 +59,7 @@ namespace BlackJack
                 case Rank.King: return 10;
                 default: return 0;
             }
+      
         }
         //translates card id integers into strings
         public override string ToString()
@@ -70,12 +72,11 @@ namespace BlackJack
     {
         //creates each potential combo of rank and suit and therefore creates a deck of 52 cards
         public Card[] cards;
-        private int numDealt = 0;
 
         public Deck()
         {
             cards = new Card[52];
-            int i = 0; // 1
+            int i = 0; 
             foreach (Rank r in Enum.GetValues(typeof(Rank)))
             {
                 int j = 0;
@@ -87,14 +88,16 @@ namespace BlackJack
                 i++;
             }
         }
+       
+        //"public Card deal" deals a card 
+        
         //swaps each card dealt with random card in deck
-        public void swap(Card[] arr, int a, int b)
+        public static void swap(Card[] arr, int a, int b)
         {
-            var temp = arr[a];
+            var numDealt = arr[a];
             arr[a] = arr[b];
-            arr[b] = temp;
+            arr[b] = numDealt;
         }
-        //shuffles deck 
         public void deckShuffle()
         {
             int rand = new Random().Next(0, 52);
@@ -102,32 +105,45 @@ namespace BlackJack
             {
                 swap(cards, i, rand);
             }
-            
         }
-        //"public Card deal" deals a card 
+        //returns a card from shuffled deck
+        private int numDealt = 0;
         public Card deal() => (numDealt < cards.Length) ? cards[numDealt++] : null;
-        public Card[] getDeckShuffle()
+        public Card[] chooseCard()
         {
             return new Card[0];
-
         }
-        
+    }
     public class Hand
     {
-        public void userHand(Card newCard)
+        public Card[] getRandom()
         {
-            
-            
-            
-            
-            return userTake;
+            return new Card[0];
         }
-            static int countScore(int a, int b)
+
+        
+        {
+            public static userHand(Card newCard)
+                }
+                public Card[] cards = new CardRandomizer();
+                
+                
+                {
+            public static compHand(Card newCard)
+                {
+
+                }
+            static int countUserHandScore(int a, int b)
             {
                 int result = a + b;
                 return a + b;
             }
-
+            static int countCompHandScore(int a, int b)
+            {
+                int result = a + b;
+                return a + b;
+            }
+}
             // ***Call THIS countScore
             //    {
             //    ***userScore == 21 && compScore == 21
