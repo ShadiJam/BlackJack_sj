@@ -25,11 +25,13 @@ namespace BlackJack_sj
                     //    deal compHand Card 2 (hide card);
                     //    
                     //    call below Play.
-                    //    Console.WriteLine("Your current score is (score). Would you like to stay or deal? (S/D)");
+                    //    Console.WriteLine(userHand.Card.Rank.Suit.ToString);
+                    //    
+                    //    Console.WriteLine("Your current score is (userScore). Would you like to stay or deal? (S/D)");
                     //    response2 = Console.ReadLine()
                     //    Console.ReadLine();
                     //    if (response2.Equals("S")); 
-                    //    call countScore;
+                    //    call handWinner;
 
                     //    if else (response2.Equals("D")
                     //    deal userHand Card 2 (display card);

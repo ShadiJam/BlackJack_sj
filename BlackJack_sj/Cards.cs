@@ -149,7 +149,7 @@ namespace BlackJack
                 return a + b;
             }
 }
-            // ***Call THIS countScore
+            // ***Call THIS handWinner
             //    {
             //    ***userScore == 21 && compScore == 21
             //        }
