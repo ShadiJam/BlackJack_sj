@@ -17,7 +17,7 @@ namespace BlackJack_sj
             response = Console.ReadLine();
                 if (response.Equals("Y"))
                 {
-                    //    shuffle 
+                    
                     //    Console.WriteLine("The dealer is shuffling! Remember, Aces are worth 11 points, not 1 point!");
                     //    deal userHand Card 1 (display card);
                     //    deal compHand Card 1 (display card);

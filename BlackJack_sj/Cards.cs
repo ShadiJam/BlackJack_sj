@@ -76,7 +76,7 @@ namespace BlackJack
         public Deck()
         {
             cards = new Card[52];
-            int i = 0; 
+            int i = 0;
             foreach (Rank r in Enum.GetValues(typeof(Rank)))
             {
                 int j = 0;
@@ -87,10 +87,7 @@ namespace BlackJack
                 }
                 i++;
             }
-        }
-       
-        //"public Card deal" deals a card 
-        
+        } 
         //swaps each card dealt with random card in deck
         public static void swap(Card[] arr, int a, int b)
         {
@@ -116,9 +113,9 @@ namespace BlackJack
     }
     public class Hand
     {
-        public Card[] getRandom()
+        public Card[] 
         {
-            return new Card[0];
+            
         }
 
         
