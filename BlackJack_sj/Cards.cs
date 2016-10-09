@@ -68,8 +68,10 @@ namespace BlackJack
 
     public class Deck
     {
-        //creates deck
+        //creates each potential combo of rank and suit and therefore creates a deck of 52 cards
         public Card[] cards;
+        private int numDealt = 0;
+
         public Deck()
         {
             cards = new Card[52];
@@ -85,24 +87,118 @@ namespace BlackJack
                 i++;
             }
         }
-            public void swap(Card[] arr, int a, int b)
+        //swaps each card dealt with random card in deck
+        public void swap(Card[] arr, int a, int b)
         {
             var temp = arr[a];
             arr[a] = arr[b];
             arr[b] = temp;
         }
-        public void Shuffle()
+        //shuffles deck 
+        public void deckShuffle()
         {
             int rand = new Random().Next(0, 52);
-            for (int i = 0; i < 52; i++) 
+            for (int i = 0; i < 52; i++)
             {
                 swap(cards, i, rand);
             }
-        }
             
         }
-            
+        //"public Card deal" deals a card to each player
+        public Card deal() => (numDealt < cards.Length) ? cards[numDealt++] : null;
+        public Card[] getDeckShuffle()
+        {
+            return new Card[0];
         }
+        static int countScore(int a, int b)
+        {
+            int result = a + b;
+            return a + b;
+        }
+
+        // ***Call THIS countScore
+        //    {
+        //    ***userScore == 21 && compScore == 21
+        //        }
+        //    show compScore
+        //    Console.WriteLine("It's a tie!")
+        //    Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //    Console.ReadLine();
+
+        //    if else {
+        //    ***userScore == 21 && compScore < 21
+        //    }
+        //    Console.WriteLine("You win!")
+        //    Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //    Console.ReadLine();
+
+        //    if else {
+        //    ***userScore == 21 && compScore > 21
+        //    }
+        //    Console.WriteLine("You win!")
+        //    Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //    Console.ReadLine();
+
+        //    if else {
+        //    ***userScore < 21 && compScore == 21
+        //    Console.WriteLine("Sorry, better luck next time!")
+        //    Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game.
+        //    Console.ReadLine();
+
+
+        //    if else {
+        //    ***userScore < 21 && compScore < 21 
+        //      if userScore > compScore {
+        //          Console.WriteLine("You win!")
+        //          Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //          Console.ReadLine();
+        //      else if userScore < compScore {
+        //          Console.WriteLine("Sorry, better luck next time!")
+        //          Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game.
+        //          Console.ReadLine();
+
+        //    if else {
+        //    ***userScore < 21 && compScore > 21 {
+        //          Console.WriteLine("You win!")
+        //          Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //          Console.ReadLine();
+        //    if else {
+        //    ****userScore > 21 && compScore == 21 {
+        //          Console.WriteLine("Sorry, better luck next time!")
+        //          Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game.
+        //          Console.ReadLine();
+        //    if else {
+        //     ***userScore > 21 && compScore < 21 {
+        //          Console.WriteLine("Sorry, better luck next time!")
+        //          Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game.
+        //          Console.ReadLine();
+
+        //    if else {
+        //     ***userScore > 21 && compScore > 21 {
+        //    Console.WriteLine("Ouch, we both lose!")
+        //    Console.WriteLine("Do you want to play BlackJack? (Y/N)"); and repeat game. 
+        //    Console.ReadLine();
+      
+    }
+    public class Hand
+    {
+        public Card[] cards = new Card[];
+        public void userTake(Card newCard)
+        {
+            var temp = new Card[cards.Length + 1];
+            
+            
+            
+            return userTake;
+        }
+
+        
+        {
+          
+        }
+    }
+}
+
         
     
         
