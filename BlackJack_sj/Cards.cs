@@ -103,51 +103,33 @@ namespace BlackJack
                 swap(cards, i, rand);
             }
         }
-        //returns a card from shuffled deck
+        //returns a card from shuffled deck and creates list of cards dealt
         private int numDealt = 0;
+        
         public Card deal() => (numDealt < cards.Length) ? cards[numDealt++] : null;
-        public Card[] chooseCard()
+        public Card[] takeCard()  
         {
             return new Card[0];
         }
     }
     public class Hand
     {
-        public Card[] cards { set; get; }
-        public int numCardsDealt { set; get; }
-        public int score { set; get; }
-        
-
-        public string result { set; get; }
-        public override string ToString()
+        public int userScore(Deck deal)
         {
-            return base.ToString();)
+
+            int sum = 0; 
+            foreach.Deal(deal, delegate (int i) { sum += i});
+            Console.WriteLine(sum);
+            }
+           
+
         }
 
-        public Hand userHand(int numCardsDealt);
-                }
-                
-                userHand = 
 
 
 
-                
-                
-                {
-            public Hand compHand()
-                {
 
-                }
-            static int countUserScore(int a, int b)
-            {
-                int result = a + b;
-                return a + b;
-            }
-            static int countCompScore(int a, int b)
-            {
-                int result = a + b;
-                return a + b;
-            }
+        
 }
             // ***Call THIS handWinner
             //    {
